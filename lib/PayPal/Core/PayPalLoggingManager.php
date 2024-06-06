@@ -70,7 +70,7 @@ class PayPalLoggingManager
      */
     public function error($message)
     {
-        $this->logger->error($message);
+        // $this->logger->error($message);
     }
 
     /**
@@ -80,7 +80,7 @@ class PayPalLoggingManager
      */
     public function warning($message)
     {
-        $this->logger->warning($message);
+        // $this->logger->warning($message);
     }
 
     /**
@@ -90,7 +90,7 @@ class PayPalLoggingManager
      */
     public function info($message)
     {
-        $this->logger->info($message);
+        // $this->logger->info($message);
     }
 
     /**
@@ -100,7 +100,7 @@ class PayPalLoggingManager
      */
     public function fine($message)
     {
-        $this->info($message);
+        // $this->info($message);
     }
 
     /**
@@ -113,7 +113,7 @@ class PayPalLoggingManager
         $config = PayPalConfigManager::getInstance()->getConfigHashmap();
         // Disable debug in live mode.
         if (array_key_exists('mode', $config) && $config['mode'] != 'live') {
-            $this->logger->debug($message);
+            // $this->logger->debug($message);
         }
     }
 }
