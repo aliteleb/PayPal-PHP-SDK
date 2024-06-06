@@ -6,7 +6,7 @@ use PayPal\Core\PayPalConfigManager;
 use Psr\Log\AbstractLogger;
 use Psr\Log\LogLevel;
 
-class PayPalLogger extends AbstractLogger
+class PayPalLogger
 {
 
     /**
@@ -72,7 +72,7 @@ class PayPalLogger extends AbstractLogger
         }
     }
 
-    public function log($level, $message, array $context = array())
+    public function log($level, Stringable|string $message, array $context = []): void
     {
         if ($this->isLoggingEnabled) {
             // Checks if the message is at level below configured logging level
