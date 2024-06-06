@@ -3,7 +3,6 @@ namespace PayPal\Transport;
 
 use PayPal\Core\PayPalHttpConfig;
 use PayPal\Core\PayPalHttpConnection;
-use PayPal\Core\PayPalLoggingManager;
 use PayPal\Rest\ApiContext;
 
 /**
@@ -13,15 +12,6 @@ use PayPal\Rest\ApiContext;
  */
 class PayPalRestCall
 {
-
-
-    /**
-     * Paypal Logger
-     *
-     * @var PayPalLoggingManager logger interface
-     */
-    private $logger;
-
     /**
      * API Context
      *
@@ -37,9 +27,7 @@ class PayPalRestCall
      */
     public function __construct(ApiContext $apiContext)
     {
-        $this->apiContext = $apiContext;
-        $this->logger = PayPalLoggingManager::getInstance(__CLASS__);
-    }
+        $this->apiContext = $apiContext;}
 
     /**
      * @param array  $handlers Array of handlers
